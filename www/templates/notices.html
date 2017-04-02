@@ -1,0 +1,47 @@
+<ion-view title="Notices" ng-init="InView='true'">
+	<ion-content padding="true" class="has-header">
+		<div class="button-bar">
+  			<a ng-click="ViewNoticeToggle()" class="button">Notice Board</a>
+  			<a ng-click="AddNoticeToggle()" class="button">Add Notice</a>
+  		</div>
+
+  		<div ng-if="InView">
+            <div class="card">
+                
+                    <strong>We</strong> are in View {{InView}}...
+                
+            </div>
+        </div>
+		
+  		<div ng-if="InAdd" class="card">
+            <div class="item item-text-wrap">
+ 			 	<div class="item item-divider">Notice Details</div>
+  				 <form class="list">
+  				 	<div class="item item-body">
+                      
+                        <label class="item item-input">
+                            <span class="input-label">Title</span>
+                            <input type="text" ng-model="noticeform.title" placeholder="Enter Title" required>
+                        </label>
+                        <label class="item item-input">
+                        	<span class="input-label">Image</span>
+                        	<button class="button button-small button-assertive" ng-class="myClass" ng-click="LaunchImagePicker()">{{LaunchButton}}</button>
+                        
+                        </label>
+                        <label class="item item-input" style="vertical-align: text-top;">
+                            <span class="input-label"  style="position:relative; bottom:1.78em;">Content</span>
+                            <textarea  ng-model="noticeform.content" rows="5" cols="10"   placeholder="Enter Content" ></textarea>
+                            
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">Admin Key</span>
+                            <input type="password" ng-model="noticeform.password" placeholder="Enter Admin Key" required>
+                        </label>
+                    <button class="button button-bar button-balanced button-small button-block">Post Notice</button>    
+                        
+             <div>    
+  				 </form>
+			 </div>
+        </div        
+	</ion-content>
+</ion-view>

@@ -1,0 +1,78 @@
+<ion-view title="My Profile">
+    <ion-content padding="true" class="has-header">
+         <img class="card animated jello" ng-src="avatar/{{PresentUser[0].ProfileImagex}}.png" style="border-radius:30px;position:relative; width:100%"/>
+         <marquee scrollamount="5"><img valign="center" width="13%" src="img/stork.gif"/>
+         	<strong>Click On The Image To Change Your Profile Picture</strong>
+         </marquee>
+		
+         <div class="card">
+         	<form class="list">
+         		<div class="item item-body">
+         			 <div class="row">
+ 						 <div class="col col-33">
+ 						 	<h2><b>Name</b></h2>
+ 						 </div>
+ 						 <div class="col ">
+ 						 	<h3>{{PresentUser[0].Name}}</h3>
+ 						 </div>
+ 					 </div>
+                      <div class="row">
+                         <div class="col col-33">
+                            <h2><b>Position </b></h2>
+                         </div>
+                         <div class="col ">
+                            <h3>{{PresentUser[0].Position}}</h3>
+                         </div>
+                     </div>
+                      <div class="row">
+                         <div class="col col-33">
+                            <h2><b>Course </b></h2>
+                         </div>
+                         <div class="col ">
+                            <h3>{{PresentUser[0].Course}}</h3>
+                         </div>
+                     </div>
+                      <div class="row">
+                         <div class="col col-33">
+                            <h2><b>Shift </b></h2>
+                         </div>
+                         <div class="col ">
+                            <h3>{{PresentUser[0].Shift}}</h3>
+                         </div>
+                     </div>
+                      <div class="row">
+                         <div class="col col-33">
+                            <h2><b>Year </b></h2>
+                         </div>
+                         <div class="col ">
+                            <h3>{{PresentUser[0].Year}}</h3>
+                         </div>
+                     </div>
+ 					 <div class="row">
+ 						 <div class="col col-33">
+ 						 	<h2><b>E-mail Id</b></h2>
+ 						 </div>
+ 						 <div class="col ">
+ 						 	<h3>{{PresentUser[0].UserName}}</h3>
+ 						 </div>
+ 					 </div>
+ 					 <div class="row">
+ 						 <div class="col col-33">
+ 						 	<h2><b>Phone </b></h2>
+ 						 </div>
+ 						 <div class="col ">
+ 						 	<h3>{{PresentUser[0].Tel}}</h3>
+ 						 </div>
+ 					 </div>
+                    
+         		</div>
+         	</form>	
+         	
+         </div>
+        <button ng-click="SignOut()" class="button button-block button-assertive pull-right">Sign Out</button>
+		
+         
+       <!---->
+    </ion-content>
+
+</ion-view>
